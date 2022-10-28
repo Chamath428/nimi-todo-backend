@@ -52,3 +52,13 @@ info: Oct-28-2022 15:41:18: 	Start the server
 info: Oct-28-2022 15:42:23: 	Start the server
 info: Oct-28-2022 15:43:41: 	Start the server
 info: Oct-28-2022 15:44:30: 	filterByDuration/200/(/todo/filter/duration)/GET
+info: Oct-28-2022 15:55:37: 	Start the server
+info: Oct-28-2022 16:24:00: 	Start the server
+info: Oct-28-2022 16:24:15: 	Start the server
+info: Oct-28-2022 16:24:20: 	addToDo/200/(/todo/add)/POST/28
+info: Oct-28-2022 16:25:15: 	Start the server
+info: Oct-28-2022 16:26:47: 	Start the server
+error: Oct-28-2022 16:27:21: 	addToDo/400/(/todo/add)/POST/ValidationError: "priority" is required
+info: Oct-28-2022 16:28:31: 	addToDo/200/(/todo/add)/POST/29
+info: Oct-28-2022 16:28:52: 	Start the server
+error: Oct-28-2022 16:29:11: 	addToDo/400/(/todo/add)/POST/ValidationError: "start_time" must be a string
