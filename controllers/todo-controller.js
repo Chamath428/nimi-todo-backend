@@ -4,17 +4,25 @@ import connection from '../database.js';
 import { logger } from '../logger.js';
 
 export const addToDo = async(req,res)=>{
-    const query=`INSERT INTO todo (activity,description,date,start_time,end_time,status,priority) VALUES ("${req.body.activity}","${req.body.description}","${req.body.date}","${req.body.start_time}","${req.body.end_time}",${req.body.status},${req.body.priority})`;
 
-    connection.query(query,(err,rows,fields)=>{
-        if(err){
-            res.status(500).send(err);
-            logger.error(`addToDo/500/(${req.originalUrl})/${req.method}/${err.message}`);
-        }else{
-            res.status(200).send({"id":rows.insertId});
-            logger.info(`addToDo/200/(${req.originalUrl})/${req.method}/${rows.insertId}`);
-        }
-    });
+    const {data,error} = addToDoModel.validate(req.body);
+
+    if(!error){
+        const query=`INSERT INTO todo (activity,description,date,start_time,end_time,status,priority) VALUES ("${req.body.activity}","${req.body.description}","${req.body.date}","${req.body.start_time}","${req.body.end_time}",${req.body.status},${req.body.priority})`;
+        
+        connection.query(query,(err,rows,fields)=>{
+            if(err){
+                res.status(500).send(err);
+                logger.error(`addToDo/500/(${req.originalUrl})/${req.method}/${err.message}`);
+            }else{
+                res.status(200).send({"id":rows.insertId});
+                logger.info(`addToDo/200/(${req.originalUrl})/${req.method}/${rows.insertId}`);
+            }
+        });
+    }else{
+        res.status(400).send(error);
+        logger.error(`addToDo/400/(${req.originalUrl})/${req.method}/${error}`)
+    }
 }
 
 export const getAllToDo = async (req,res)=>{
@@ -110,6 +118,7 @@ export const filterByPrority = (req,res)=>{
 }
 
 export const filterByDuration = (req,res)=>{
+
     const query = "SELECT *,TIMEDIFF(end_time, start_time) as timedif FROM todo ORDER BY timedif DESC";
 
     connection.query(query,(err,rows,fields)=>{
