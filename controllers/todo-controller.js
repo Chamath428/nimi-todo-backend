@@ -109,3 +109,17 @@ export const filterByPrority = (req,res)=>{
     })
 }
 
+export const filterByDuration = (req,res)=>{
+    const query = "SELECT *,TIMEDIFF(end_time, start_time) as timedif FROM todo ORDER BY timedif DESC";
+
+    connection.query(query,(err,rows,fields)=>{
+        if(err){
+            res.status(500).send(err);
+            logger.error(`filterByDuration/500/(${req.originalUrl})/${req.method}/${err.message}`);
+        }else{
+            res.status(200).send(rows);
+            logger.info(`filterByDuration/200/(${req.originalUrl})/${req.method}`);
+        }
+    })
+}
+

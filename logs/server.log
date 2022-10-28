@@ -44,3 +44,11 @@ info: Oct-28-2022 13:25:11: 	Start the server
 info: Oct-28-2022 13:25:14: 	updateToDo/400/(/todo/update)/PUT/3/2
 info: Oct-28-2022 13:26:36: 	Start the server
 info: Oct-28-2022 13:26:40: 	filterByPrority/200/(/todo/filter/priority)/GET
+info: Oct-28-2022 15:26:08: 	Start the server
+info: Oct-28-2022 15:30:25: 	addToDo/200/(/todo/add)/POST/25
+info: Oct-28-2022 15:30:33: 	addToDo/200/(/todo/add)/POST/26
+info: Oct-28-2022 15:30:49: 	addToDo/200/(/todo/add)/POST/27
+info: Oct-28-2022 15:41:18: 	Start the server
+info: Oct-28-2022 15:42:23: 	Start the server
+info: Oct-28-2022 15:43:41: 	Start the server
+info: Oct-28-2022 15:44:30: 	filterByDuration/200/(/todo/filter/duration)/GET
