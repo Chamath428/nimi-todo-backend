@@ -7,5 +7,7 @@ todoRouters.post('/add',addToDo);
 todoRouters.get('/getAll',getAllToDo);
 todoRouters.get('/getById/:id',getToDoById);
 todoRouters.delete('/deleteById/:id',deleteToDo);
+todoRouters.put('/update',updateToDo);
+
 
 export  default todoRouters;
