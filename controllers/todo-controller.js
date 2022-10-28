@@ -14,3 +14,49 @@ export const addToDo = async(req,res)=>{
     });
 }
 
+export const getAllToDo = async (req,res)=>{
+    const query = `SELECT 
+                    todo.id,
+                    todo.activity,
+                    todo.description,
+                    todo.date,
+                    todo.start_time,
+                    todo.end_time,
+                    activity_type.type 
+                    FROM todo
+                    LEFT JOIN
+                    activity_type
+                    ON todo.status=activity_type.id`;
+
+    connection.query(query,(err,rows,fields)=>{
+        if(err){
+            res.status(400).send(err)
+        }else{
+            res.status(200).send(rows)
+        }
+    })
+}
+
+export const getToDoById = async(req,res)=>{
+    const query = `SELECT 
+                        todo.activity,
+                        todo.description,
+                        todo.date,
+                        todo.start_time,
+                        todo.end_time,
+                        activity_type.type 
+                        FROM todo
+                        LEFT JOIN
+                        activity_type
+                        ON todo.status=activity_type.id
+                        WHERE todo.id=${req.params.id}`;
+
+    connection.query(query,(err,rows,fields)=>{
+        if(err){
+            res.status(400).send(err);
+        }else{
+            res.status(200).send(rows);
+        }
+    })
+}
+
