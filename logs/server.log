@@ -1,0 +1,46 @@
+info: Oct-28-2022 12:06:20: 	infor
+error: Oct-28-2022 12:06:20: 	ERROR
+warn: Oct-28-2022 12:06:20: 	warn
+info: Oct-28-2022 12:06:20: 	Start the server
+info: Oct-28-2022 12:06:47: 	Start the server
+info: Oct-28-2022 12:37:38: 	Start the server
+info: Oct-28-2022 12:37:57: 	addToDo/200//todo/add/POST/::1
+info: Oct-28-2022 12:39:11: 	Start the server
+info: Oct-28-2022 12:39:14: 	addToDo/200/(/todo/add)/POST/19
+info: Oct-28-2022 12:39:56: 	Start the server
+error: Oct-28-2022 12:39:58: 	addToDo/undefined/ER_NO_SUCH_TABLE: Table 'tododb.tdo' doesn't exist//todo/add/POST/::1
+info: Oct-28-2022 12:40:44: 	Start the server
+error: Oct-28-2022 12:40:46: 	addToDo/undefined/ER_NO_SUCH_TABLE: Table 'tododb.tdo' doesn't exist/(/todo/add)/POST
+info: Oct-28-2022 12:41:15: 	Start the server
+error: Oct-28-2022 12:41:17: 	addToDo/400/ER_NO_SUCH_TABLE: Table 'tododb.tdo' doesn't exist/(/todo/add)/POST
+info: Oct-28-2022 12:42:11: 	Start the server
+error: Oct-28-2022 12:42:15: 	addToDo/400/(/todo/add)/POST/ER_NO_SUCH_TABLE: Table 'tododb.tdo' doesn't exist
+info: Oct-28-2022 12:42:43: 	Start the server
+info: Oct-28-2022 12:42:52: 	addToDo/200/(/todo/add)/POST/20
+info: Oct-28-2022 12:44:00: 	addToDo/200/(/todo/add)/POST/21
+info: Oct-28-2022 12:44:32: 	addToDo/200/(/todo/add)/POST/22
+error: Oct-28-2022 12:44:43: 	addToDo/400/(/todo/add)/POST/ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'field list'
+info: Oct-28-2022 12:47:23: 	Start the server
+info: Oct-28-2022 12:53:13: 	Start the server
+info: Oct-28-2022 12:54:31: 	Start the server
+info: Oct-28-2022 12:54:36: 	getAllToDo/200/(/todo/getAll)/GET
+info: Oct-28-2022 12:54:52: 	getAllToDo/200/(/todo/getById/1)/GET/undefined
+info: Oct-28-2022 12:55:21: 	Start the server
+info: Oct-28-2022 12:55:26: 	getToDoById/200/(/todo/getById/1)/GET/undefined
+info: Oct-28-2022 12:55:29: 	getToDoById/200/(/todo/getById/2)/GET/undefined
+info: Oct-28-2022 12:56:42: 	getToDoById/200/(/todo/getById/2)/GET/undefined
+info: Oct-28-2022 12:57:26: 	Start the server
+info: Oct-28-2022 12:57:28: 	getToDoById/200/(/todo/getById/2)/GET/$2}
+info: Oct-28-2022 12:57:42: 	Start the server
+info: Oct-28-2022 12:57:44: 	getToDoById/200/(/todo/getById/2)/GET/2}
+info: Oct-28-2022 13:02:56: 	Start the server
+info: Oct-28-2022 13:03:20: 	deleteToDo/200/(/todo/deleteById/1)/DELETE/1
+info: Oct-28-2022 13:03:36: 	deleteToDo/200/(/todo/deleteById/6)/DELETE/6
+info: Oct-28-2022 13:04:12: 	Start the server
+error: Oct-28-2022 13:04:14: 	deleteToDo/400/(/todo/deleteById/6)/DELETE/ER_NO_SUCH_TABLE: Table 'tododb.tsodo' doesn't exist
+info: Oct-28-2022 13:04:40: 	Start the server
+info: Oct-28-2022 13:24:25: 	Start the server
+info: Oct-28-2022 13:25:11: 	Start the server
+info: Oct-28-2022 13:25:14: 	updateToDo/400/(/todo/update)/PUT/3/2
+info: Oct-28-2022 13:26:36: 	Start the server
+info: Oct-28-2022 13:26:40: 	filterByPrority/200/(/todo/filter/priority)/GET
