@@ -4,5 +4,7 @@ import { addToDo,getAllToDo,getToDoById,deleteToDo,updateToDo } from '../control
 const todoRouters = express.Router();
 
 todoRouters.post('/add',addToDo);
+todoRouters.get('/getAll',getAllToDo);
+todoRouters.get('/getById/:id',getToDoById);
 
 export  default todoRouters;
