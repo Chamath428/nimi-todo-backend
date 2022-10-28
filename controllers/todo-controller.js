@@ -60,3 +60,15 @@ export const getToDoById = async(req,res)=>{
     })
 }
 
+export const deleteToDo = async (req,res)=>{
+    const query = `DELETE FROM todo WHERE id=${req.params.id}`;
+
+    connection.query(query,(err,rows,fields)=>{
+        if(err){
+            res.status(400).send(err);
+        }else {
+            res.status(200).send(rows);
+        }
+    })
+}
+
