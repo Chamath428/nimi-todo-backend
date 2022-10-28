@@ -72,3 +72,15 @@ export const deleteToDo = async (req,res)=>{
     })
 }
 
+export const updateToDo = async (req,res)=>{
+    const query = `UPDATE todo SET status=${req.body.status} WHERE id=${req.body.id}`;
+
+    connection.query(query,(err,rows,fields)=>{
+        if(err){
+            res.status(400).send(err);
+        }else{
+            res.status(200).send(rows);
+        }
+    })
+}
+
