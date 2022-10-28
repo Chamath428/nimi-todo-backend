@@ -1,6 +1,7 @@
 import express from 'express';
 import connection from './database.js';
 import todoRouters from './routes/todo-routers.js';
+import { logger } from './logger.js';
 
 const PORT = 5000;
 
@@ -9,4 +10,6 @@ app.use(express.json());
 
 app.use('/todo',todoRouters);
 
-app.listen(PORT,()=>console.log(`app is running on port:${PORT}`));
+app.listen(PORT,()=>{
+    logger.info("Start the server")
+});
